@@ -1,0 +1,27 @@
+EntryNode #title{
+    background-color: rgba(189, 31, 31, 0.5);
+}
+EndNode #title{
+    background-color: rgba(189, 31, 31, 0.5);
+}
+SimpleDialogueNode #title{
+    background-color: rgba(21, 107, 177, 0.5);
+}
+ChoiceDialogueNode #title{
+    background-color: rgba(96, 31, 171, 0.5);
+}
+BooleanNode #title{
+    background-color: rgba(72, 72, 72, 0.5);
+}
+AndNode #title{
+    background-color: rgba(51, 181, 51, 0.5);
+}
+OrNode #title{
+    background-color: rgba(51, 181, 51, 0.5);
+}
+ConditionNode #title{
+    background-color: rgba(51, 181, 51, 0.5);
+}
+EventNode #title{
+    background-color: rgba(230, 223, 27, 0.5);
+}
