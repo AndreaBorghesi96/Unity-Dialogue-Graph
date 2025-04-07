@@ -150,6 +150,33 @@ public static class NodeCreateUtility
         textField.SetValueWithoutNotify(node.DialogueText != null ? node.DialogueText : "Text");
         node.mainContainer.Add(textField);
     }
+    public static void AddConditionField(ConditionNode node)
+    {
+        var condFieldContainer = new VisualElement();
+        condFieldContainer.style.flexDirection = FlexDirection.Row;
+
+        var label = new Label("Variable:");
+        var condField = new TextField
+        {
+            value = string.Empty,
+            multiline = true
+        };
+
+        condField.style.width = 100f;
+        condField.style.whiteSpace = WhiteSpace.Normal;
+        condField.style.paddingLeft = 20f;
+
+        condField.RegisterValueChangedCallback(evt =>
+        {
+            node.VarName = evt.newValue;
+        });
+        condField.SetValueWithoutNotify(node.VarName != null ? node.VarName : "");
+
+        condFieldContainer.Add(label);
+        condFieldContainer.Add(condField);
+        
+        node.mainContainer.Add(condFieldContainer);
+    }
     private static void RemovePort(BaseNode dialogueNode, Port generatedPort, DialogueGraphView graphView)
     {
         var targetEdge = graphView.edges.ToList().Where(x => x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);

@@ -38,6 +38,8 @@ public class GraphSaveUtility
             {
                 BasePortGuid = ((PortData)connectedPorts[i].output.userData).Guid,
                 TargetPortGuid = ((PortData)connectedPorts[i].input.userData).Guid,
+                BaseNodeGuid = outputNode.Guid,
+                TargetNodeGuid = inputNode.Guid,
             });
         }
 
@@ -48,6 +50,7 @@ public class GraphSaveUtility
                 Guid = node.Guid,
                 NodeType = node.GetType().ToString(),
                 DialogueText = node is DialogueNode ? (node as DialogueNode).DialogueText : null,
+                VarName = node is ConditionNode ? (node as ConditionNode).VarName : null,
                 Position = node.GetPosition().position,
                 OutputPortList = node.Query<Port>().ToList().Where(port => port.direction == Direction.Output).Select(port => (PortData)port.userData).ToList(),
                 InputPortList = node.Query<Port>().ToList().Where(port => port.direction == Direction.Input).Select(port => (PortData)port.userData).ToList()

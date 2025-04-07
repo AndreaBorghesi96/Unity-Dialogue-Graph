@@ -17,7 +17,7 @@ MonoBehaviour:
     NodeType: EntryNode
     DialogueText: 
     Events: []
-    Position: {x: 50, y: 200}
+    Position: {x: 50.4, y: 200}
     OutputPortList:
     - Guid: 25105c5d-a0ca-40ae-a516-290f2ce20a0a
       Text: 
@@ -27,7 +27,7 @@ MonoBehaviour:
     NodeType: ChoiceDialogueNode
     DialogueText: Pizza?
     Events: []
-    Position: {x: 245, y: 238}
+    Position: {x: 244.8, y: 237.6}
     OutputPortList:
     - Guid: 892fe5f2-d566-4997-9157-a8bdd0ac1939
       Text: Text
@@ -43,7 +43,7 @@ MonoBehaviour:
     NodeType: SimpleDialogueNode
     DialogueText: Text
     Events: []
-    Position: {x: 543, y: 350}
+    Position: {x: 543.2, y: 349.6}
     OutputPortList:
     - Guid: 9d4091d0-62e8-4bcb-acd8-d50d7e357b38
       Text: 
@@ -56,7 +56,7 @@ MonoBehaviour:
     NodeType: EndNode
     DialogueText: 
     Events: []
-    Position: {x: 909, y: 185}
+    Position: {x: 908.8, y: 184.8}
     OutputPortList: []
     InputPortList:
     - Guid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
@@ -65,9 +65,17 @@ MonoBehaviour:
   NodeLinks:
   - BasePortGuid: 25105c5d-a0ca-40ae-a516-290f2ce20a0a
     TargetPortGuid: 840239c1-ea11-4a4e-8712-83e28ce93cb3
+    BaseNodeGuid: b2471091-ee81-4d48-a933-50b2aa31339d
+    TargetNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
   - BasePortGuid: 892fe5f2-d566-4997-9157-a8bdd0ac1939
     TargetPortGuid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
+    BaseNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
+    TargetNodeGuid: 4255c9b6-f13b-4acf-8eec-096c79777b95
   - BasePortGuid: 47a57c07-46dd-46c3-9beb-3d74d1acf7ab
     TargetPortGuid: 8ff082d8-b35d-4237-b43e-eab8194e6f1b
+    BaseNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
+    TargetNodeGuid: b9ef352b-76d6-4b3f-bb57-847b5321081b
   - BasePortGuid: 9d4091d0-62e8-4bcb-acd8-d50d7e357b38
     TargetPortGuid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
+    BaseNodeGuid: b9ef352b-76d6-4b3f-bb57-847b5321081b
+    TargetNodeGuid: 4255c9b6-f13b-4acf-8eec-096c79777b95

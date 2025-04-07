@@ -142,6 +142,7 @@ public class DialogueGraphView : GraphView
 
         node.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
         NodeCreateUtility.AddLogicExitPort(node, nodeData != null ? nodeData.GetLogicExitPort() : null);
+        NodeCreateUtility.AddConditionField(node);
         node.RefreshPorts();
         node.RefreshExpandedState();
         node.SetPosition(new Rect(position, defaultNodeSize));

@@ -9,6 +9,7 @@ public class DialogueNodeData
     public string Guid;
     public string NodeType;
     public string DialogueText;
+    public string VarName;
     public List<ScriptableObject> Events;
     public Vector2 Position;
 

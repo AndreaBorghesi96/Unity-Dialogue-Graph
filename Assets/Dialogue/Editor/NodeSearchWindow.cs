@@ -9,7 +9,6 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
     private DialogueGraphView graphView;
     private EditorWindow window;
     private Texture2D indentationIcon;
-
     public void Init(DialogueGraphView dialogueGraphView, EditorWindow editorWindow)
     {
         graphView = dialogueGraphView;
@@ -19,7 +18,6 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
         indentationIcon.SetPixel(0, 0, new Color(0, 0, 0, 0));
         indentationIcon.Apply();
     }
-
     public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
     {
         var tree = new List<SearchTreeEntry> {
@@ -58,7 +56,6 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
         };
         return tree;
     }
-
     public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
     {
         var worldMousePosition = window.rootVisualElement.ChangeCoordinatesTo(window.rootVisualElement.parent,
