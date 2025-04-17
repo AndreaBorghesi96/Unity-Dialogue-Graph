@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a94748f22eeaacd4a987990d4b0c47fa, type: 3}
-  m_Name: New Dialogue 2
+  m_Name: Dialogue 1
   m_EditorClassIdentifier: 
   DialogueNodeData:
   - Guid: b2471091-ee81-4d48-a933-50b2aa31339d
     NodeType: EntryNode
     DialogueText: 
-    Position: {x: 50.4, y: 200}
+    VarName: 
+    Events: []
+    Position: {x: 50, y: 200}
     OutputPortList:
     - Guid: 25105c5d-a0ca-40ae-a516-290f2ce20a0a
       Text: 
@@ -24,14 +26,16 @@ MonoBehaviour:
     InputPortList: []
   - Guid: a369fe72-09e8-469e-801e-da9b23286945
     NodeType: ChoiceDialogueNode
-    DialogueText: Text
-    Position: {x: 244.8, y: 238.4}
+    DialogueText: Text 1
+    VarName: 
+    Events: []
+    Position: {x: 245, y: 238}
     OutputPortList:
     - Guid: 892fe5f2-d566-4997-9157-a8bdd0ac1939
-      Text: Text
+      Text: Option 1
       Type: 0
     - Guid: 47a57c07-46dd-46c3-9beb-3d74d1acf7ab
-      Text: Text
+      Text: Option 2
       Type: 0
     InputPortList:
     - Guid: 840239c1-ea11-4a4e-8712-83e28ce93cb3
@@ -39,8 +43,10 @@ MonoBehaviour:
       Type: 0
   - Guid: b9ef352b-76d6-4b3f-bb57-847b5321081b
     NodeType: SimpleDialogueNode
-    DialogueText: Text
-    Position: {x: 543.2, y: 349.6}
+    DialogueText: Text 2
+    VarName: 
+    Events: []
+    Position: {x: 543, y: 350}
     OutputPortList:
     - Guid: 9d4091d0-62e8-4bcb-acd8-d50d7e357b38
       Text: 
@@ -49,22 +55,12 @@ MonoBehaviour:
     - Guid: 8ff082d8-b35d-4237-b43e-eab8194e6f1b
       Text: 
       Type: 0
-  - Guid: b4c6d45b-8c46-46fc-9e8d-5de8d12416f3
-    NodeType: AndNode
-    DialogueText: 
-    Position: {x: 364, y: 18.4}
-    OutputPortList:
-    - Guid: 1cb7075b-495e-435c-8825-9e9b0893b10f
-      Text: 
-      Type: 1
-    InputPortList:
-    - Guid: 77afc7aa-3c29-47a9-934a-5f782722be46
-      Text: 
-      Type: 1
   - Guid: 42d94151-d303-4a50-9788-144dd0799189
     NodeType: ConditionNode
     DialogueText: 
-    Position: {x: 195.2, y: -17.599998}
+    VarName: var_1
+    Events: []
+    Position: {x: 195, y: -18}
     OutputPortList:
     - Guid: aa836de5-60eb-4ff6-9dba-e5bb61faf9bf
       Text: 
@@ -73,16 +69,45 @@ MonoBehaviour:
   - Guid: 1673703f-81ba-4379-8000-d2bdd4ea2bbe
     NodeType: ConditionNode
     DialogueText: 
-    Position: {x: 188, y: 83.2}
+    VarName: var_2
+    Events: []
+    Position: {x: 188, y: 83}
     OutputPortList:
     - Guid: 6ef681b4-021f-488d-a441-c343aad5f996
       Text: 
       Type: 1
     InputPortList: []
+  - Guid: 4255c9b6-f13b-4acf-8eec-096c79777b95
+    NodeType: EndNode
+    DialogueText: 
+    VarName: 
+    Events: []
+    Position: {x: 922, y: 161}
+    OutputPortList: []
+    InputPortList:
+    - Guid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
+      Text: 
+      Type: 0
+  - Guid: b4c6d45b-8c46-46fc-9e8d-5de8d12416f3
+    NodeType: AndNode
+    DialogueText: 
+    VarName: 
+    Events: []
+    Position: {x: 401, y: 33}
+    OutputPortList:
+    - Guid: 1cb7075b-495e-435c-8825-9e9b0893b10f
+      Text: 
+      Type: 1
+    InputPortList:
+    - Guid: 77afc7aa-3c29-47a9-934a-5f782722be46
+      Text: 
+      Type: 1
   - Guid: 85326b0d-c8b5-4eff-abaf-ee556783e076
     NodeType: BooleanNode
     DialogueText: 
-    Position: {x: 658.4, y: -32}
+    VarName: 
+    Events: []
+    Position: {x: 720, y: 26}
     OutputPortList:
     - Guid: fd9e56cb-b18e-4d5b-a55b-7f9f599f4c16
       Text: True
@@ -97,31 +122,40 @@ MonoBehaviour:
     - Guid: d84de7ed-9dfa-421c-9357-3d53270cc1a0
       Text: 
       Type: 1
-  - Guid: 4255c9b6-f13b-4acf-8eec-096c79777b95
-    NodeType: EndNode
-    DialogueText: 
-    Position: {x: 1228, y: 330.4}
-    OutputPortList: []
-    InputPortList:
-    - Guid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
-      Text: 
-      Type: 0
   NodeLinks:
   - BasePortGuid: 25105c5d-a0ca-40ae-a516-290f2ce20a0a
     TargetPortGuid: 840239c1-ea11-4a4e-8712-83e28ce93cb3
+    BaseNodeGuid: b2471091-ee81-4d48-a933-50b2aa31339d
+    TargetNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
   - BasePortGuid: 892fe5f2-d566-4997-9157-a8bdd0ac1939
     TargetPortGuid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
+    BaseNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
+    TargetNodeGuid: 4255c9b6-f13b-4acf-8eec-096c79777b95
   - BasePortGuid: 47a57c07-46dd-46c3-9beb-3d74d1acf7ab
     TargetPortGuid: 8ff082d8-b35d-4237-b43e-eab8194e6f1b
+    BaseNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
+    TargetNodeGuid: b9ef352b-76d6-4b3f-bb57-847b5321081b
   - BasePortGuid: 9d4091d0-62e8-4bcb-acd8-d50d7e357b38
     TargetPortGuid: 92db21d0-f2f1-416f-9d84-c482c5452000
+    BaseNodeGuid: b9ef352b-76d6-4b3f-bb57-847b5321081b
+    TargetNodeGuid: 85326b0d-c8b5-4eff-abaf-ee556783e076
   - BasePortGuid: 1cb7075b-495e-435c-8825-9e9b0893b10f
     TargetPortGuid: d84de7ed-9dfa-421c-9357-3d53270cc1a0
+    BaseNodeGuid: b4c6d45b-8c46-46fc-9e8d-5de8d12416f3
+    TargetNodeGuid: 85326b0d-c8b5-4eff-abaf-ee556783e076
   - BasePortGuid: aa836de5-60eb-4ff6-9dba-e5bb61faf9bf
     TargetPortGuid: 77afc7aa-3c29-47a9-934a-5f782722be46
+    BaseNodeGuid: 42d94151-d303-4a50-9788-144dd0799189
+    TargetNodeGuid: b4c6d45b-8c46-46fc-9e8d-5de8d12416f3
   - BasePortGuid: 6ef681b4-021f-488d-a441-c343aad5f996
     TargetPortGuid: 77afc7aa-3c29-47a9-934a-5f782722be46
+    BaseNodeGuid: 1673703f-81ba-4379-8000-d2bdd4ea2bbe
+    TargetNodeGuid: b4c6d45b-8c46-46fc-9e8d-5de8d12416f3
   - BasePortGuid: fd9e56cb-b18e-4d5b-a55b-7f9f599f4c16
     TargetPortGuid: a728c85c-a18c-463e-965c-e1bc8e8e2f5b
+    BaseNodeGuid: 85326b0d-c8b5-4eff-abaf-ee556783e076
+    TargetNodeGuid: 4255c9b6-f13b-4acf-8eec-096c79777b95
   - BasePortGuid: 0d91177f-2e4f-4a91-8cfc-1103e6fd53d3
     TargetPortGuid: 840239c1-ea11-4a4e-8712-83e28ce93cb3
+    BaseNodeGuid: 85326b0d-c8b5-4eff-abaf-ee556783e076
+    TargetNodeGuid: a369fe72-09e8-469e-801e-da9b23286945
